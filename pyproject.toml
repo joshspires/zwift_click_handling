@@ -18,7 +18,6 @@ keyboard = "^0.13.5"
 cffi = {version = "^1.17.1", allow-prereleases = true}
 blackboxprotobuf = "^1.0.1"
 PyQt6 = "^6.7.0"
-pyinstaller = "^6.12.0"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.13.2"
