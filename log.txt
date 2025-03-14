@@ -467,3 +467,5 @@ eprofile
 ImportError: DLL load failed while importing
 _winrt_windows_devices_bluetooth_genericattribut
 eprofile: The filename or extension is too long.
+C:\Users\Josh-SFPC\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\Local\pypoetry\Cache\virtualenvs\zwift-click-handler-07GLcU7v-py3.13\Scripts\python.exe: can't open file 'C:\\Users\\Josh-SFPC\\Documents\\GitHub\\zwift_click_handling\\app.py': [Errno 2] No such file or directory
+C:\Users\Josh-SFPC\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\Local\pypoetry\Cache\virtualenvs\zwift-click-handler-07GLcU7v-py3.13\Scripts\python.exe: can't open file 'C:\\Users\\Josh-SFPC\\Documents\\GitHub\\zwift_click_handling\\app.py': [Errno 2] No such file or directory
