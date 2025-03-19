@@ -44,7 +44,7 @@ logging.getLogger('bleak.backends').setLevel(sub_level)
 _logger.info(f"Set up logging @ \"{datetime.now().astimezone().isoformat()}\"")
 
 SOFTWARE_KEYMAPS = {
-    'zwift': {
+    'indieVelo': {
         'up': 'num plus',
         'down': 'num minus'
     },
@@ -57,7 +57,7 @@ SOFTWARE_KEYMAPS = {
 
 class ClickBLE:
 
-    def __init__(self, mac_address: Optional[str], encrypted: bool, software_type: str = 'zwift', verbose: bool = False):
+    def __init__(self, mac_address: Optional[str], encrypted: bool, software_type: str = 'indieVelo', verbose: bool = False):
         self.logger = logging.getLogger('ClickBLE')
         if verbose:
             self.logger.setLevel(logging.DEBUG)
@@ -311,7 +311,7 @@ parser.add_argument(
     '-s',
     dest='software',  # added dest parameter
     choices=list(SOFTWARE_KEYMAPS.keys()),
-    default='zwift',
+    default='indieVelo',
     help="The training software being used (determines key mappings)"
 )
 args = parser.parse_args()
