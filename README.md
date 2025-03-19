@@ -5,6 +5,9 @@
 - Addition of Indoor Training software selection. Currently supports key bindings for
   - indieVelo
   - MyWoosh
+## Prerequisites
+- Python3.12
+- Poetry
 ## How to run
 1. Clone or donwload this repo.
 2. Open it in VSCODE (or editor or choice).
