@@ -2,7 +2,7 @@
 
 ## Improvements over the original version
 - Addition of Indoor Training software selection. Currently supports key bindings for
-- - indieVelo
+  - indieVelo
   - MyWoosh
 ## How to run
 1. Clone or donwload this repo.
