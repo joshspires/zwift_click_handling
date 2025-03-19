@@ -1,5 +1,20 @@
 # Zwift Click Handler
 
+## Improvements over the original version
+- Addition of Indoor Training software selection. Currently supports key bindings for
+- - indieVelo
+  - MyWoosh
+## How to run
+1. Clone or donwload this repo.
+2. Open it in VSCODE (or editor or choice).
+3. Open the terminal and enter `poetry config virtualenvs.in-project true` then `poetry install --no-root` (you might need to run `poetry lock` before install if you get the error message).
+4. Now run the app using `poetry run python app.py` and click a button on your Zwift Click to ensure the blue light is flashing.
+
+The script will automatically locate the Zwift Click. If you want to connect to a specific Zwift Click run `poetry run python app.py "DE:53:77:EB:6B:A1"`.
+The script will automatically default to the keybindings for indieVelo. If you want a specific one run `poetry run python app.py -s mywoosh`.
+ 
+----------------------------
+
 This is a small python script that will translate clicks of the two buttons on a 
 [Zwift Click](https://us.zwift.com/products/zwift-click-virtual-shifter?variant=43859765297408) into
 plus/minus keystrokes to control virtual shifting on [indieVelo](https://indievelo.com/).
@@ -14,32 +29,6 @@ In it's current implementation, it will connect to a Zwift Click (without encryp
 part working) and print out to the console when a button press/release is detected, as well as when
 the Click broadcasts its current battery level. Here's an example of the
 output from pressing and releasing the plus button and then the minus button three times each:
-
-```
-[11:49:54] INFO     Set up logging @ "2024-05-13T11:49:54.795359-06:00"                  app.py:40
-           INFO     Setting up BLE client **WITHOUT** encryption                         app.py:49
-           INFO     Using MAC of "None"                                                  app.py:51
-           INFO     Scanning for Click...                                                app.py:89
-[11:49:55] INFO     Found Click device with MAC "DE:53:77:EB:6B:A1"                      app.py:93
-           INFO     Waiting for device to be visible; please press a button on the       app.py:235
-                    Click if it is not already in "connecting" mode (pulsing blue light)
-[11:49:58] INFO     Click device found; Starting connection handshake                    app.py:246
-           INFO     Finished handshake; waiting for input (press `Ctrl-C` to exit)       app.py:257
-[11:49:59] INFO     Plus button PRESSED                                                  app.py:146
-           INFO     Current battery level is 93                                          app.py:120
-[11:50:00] INFO     Plus button RELEASED                                                 app.py:146
-           INFO     Plus button PRESSED                                                  app.py:146
-           INFO     Plus button RELEASED                                                 app.py:146
-[11:50:01] INFO     Plus button PRESSED                                                  app.py:146
-           INFO     Plus button RELEASED                                                 app.py:146
-[11:50:02] INFO     Minus button PRESSED                                                 app.py:148
-           INFO     Minus button RELEASED                                                app.py:148
-           INFO     Current battery level is 93                                          app.py:120
-           INFO     Minus button PRESSED                                                 app.py:148
-           INFO     Minus button RELEASED                                                app.py:148
-           INFO     Minus button PRESSED                                                 app.py:148
-           INFO     Minus button RELEASED                                                app.py:148
-```
 
 These button presses are then translated into keyboard inputs (`+` / `-`), which will control virtual 
 shifting in indieVelo if the application has focus.
