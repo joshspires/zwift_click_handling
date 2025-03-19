@@ -1,6 +1,7 @@
 # Zwift Click Handler
 
 ## Improvements over the original version
+- Improved error handling and connection retrying
 - Addition of Indoor Training software selection. Currently supports key bindings for
   - indieVelo
   - MyWoosh
